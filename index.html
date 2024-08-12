@@ -81,7 +81,22 @@
         <p>Portfolio content will go here</p>
     </div>
     <div id="contact" class="slide">
-        <p>Contact stuff will go here</p>
+        <div id = "contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class = "contact-left">
+                <div class ="contact-left-title">
+                    <h2>Contact Me</h2>
+                    <hr> 
+                </div>
+                <input type="hidden" name="access_key" value="d332af5c-d163-40e0-9f90-36cd9c9bbe7c">
+                <input type = "text" name = "name" placeholder="Your Name" class = "contact-inputs" required>
+                <input type = "email" name = "email" placeholder="Your Email" class = "contact-inputs" required>
+                <textarea name = "message" placeholder="Your Message" class = "contact-inputs" required></textarea>
+                <button type="submit">Submit <img src = "" alt = "submit"></button> 
+            </form>
+            <div id = "contact-right">
+
+            </div>
+        </div>
     </div>
     
     <script src="scrollevents.js"></script>
@@ -115,6 +130,18 @@
             nav.classList.remove('fixed-nav');
         }
     }
+
+    function resetToIntroduction() {
+        window.scrollTo(0, 0);
+
+        history.replaceState(null, null, ' ');
+
+        document.body.classList.add('no-scroll');
+        document.getElementById('view-work').style.display = 'block';
+        nav.classList.remove('fixed-nav');
+    }
+
+    resetToIntroduction();
 
     window.addEventListener('scroll', () => {
         handleNavPosition();

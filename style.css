@@ -269,3 +269,79 @@ a:hover {
     color: #000;
     padding: 50px 10%;
 }
+
+.contact-container {
+    height: 100vh; 
+    display:flex; 
+    align-items: center; 
+    justify-content: space-evenly; 
+}
+
+.contact-left{
+    display:flex; 
+    flex-direction: column; 
+    align-items: start; 
+    gap: 20px; 
+}
+
+.contact-left-title h2{
+    font-weight: 600; 
+    color: #ff4f5a;
+    font-size: 40px; 
+    margin-bottom: 5px; 
+}
+
+.contact-left-title hr{
+    border:none; 
+    width: 120px; 
+    height: 5px; 
+    background-color: #ff4f5a;
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+}
+
+.contact-inputs{
+    width: 400px; 
+    height: 50px; 
+    border:none; 
+    outline: none; 
+    padding-left: 25px; 
+    font-weight: 500; 
+    color: #ff4f5a;
+    border-radius: 50px; 
+}
+
+.contact-left textarea{
+    height: 140px; 
+    padding-top: 15px; 
+    border-radius: 20px; 
+}
+
+.contact-inputs:focus{
+    border:2px solid #ff4f5a;
+}
+
+.contact-inputs::placeholder{
+    color: rgb(119, 118, 118); 
+}
+
+.contact-left button {
+    display:flex; 
+    align-items: center;
+    padding: 15px 30px; 
+    font-size: 16px; 
+    color: black; 
+    gap: 10px; 
+    border:none; 
+    border-radius: 50px; 
+    background: linear-gradient(270deg, #ff994f, #ff4f5a ); 
+    cursor: pointer; 
+}
+
+.contact-left button img{
+    height: 15px; 
+}
+
+.contact-right img{
+    width: 50; 
+}
