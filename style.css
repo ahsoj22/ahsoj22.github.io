@@ -12,7 +12,7 @@ html {
 }
 
 body.no-scroll {
-    overflow: hidden; /* Disable scrolling */
+    overflow: hidden; 
 }
 
 body {
@@ -35,7 +35,6 @@ body {
     padding: 10px 10%; 
 }
 
-/* Navbar styling */
 nav {
     display: flex; 
     align-items: center; 
@@ -48,7 +47,6 @@ nav {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* Navbar fixed to top right */
 nav.fixed-nav {
     position: fixed;
     top: 20px;
@@ -56,10 +54,16 @@ nav.fixed-nav {
     margin-bottom: 0;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 nav ul li {
-    display: inline-block; 
-    list-style: none; 
-    margin: 10px 20px; 
+    display: inline-block;
+    position: relative;
+    margin: 10px 20px;
 }
 
 nav ul li a {
@@ -87,10 +91,56 @@ nav ul li a.active-link::after {
     width: 100%; 
 }
 
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Position below the parent */
+    left: 0;
+}
+
+.dropdown-content li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-content li a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ff4f5a;
+    color: white; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover > .socials-link::after {
+    width: 100%;
+}
+
+
+
 .header-text {
     margin-top: 20%; 
     font-size: 30px; 
     color: #fff; 
+}
+
+.header-text p {
+    color: #fff;
 }
 
 .header-text h1 {
@@ -117,10 +167,8 @@ nav ul li a.active-link::after {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
-    background: #ff4f5a;
     padding: 10px 20px;
     border-radius: 5px;
-    color: #ffffff;
 }
 
 .sub-title::before {
@@ -270,12 +318,19 @@ a:hover {
     padding: 50px 10%;
 }
 
+
+
+
 .contact-container {
     height: 100vh; 
-    display:flex; 
-    align-items: center; 
-    justify-content: space-evenly; 
+    display: flex; 
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between; 
+    min-height:calc(100vh - 100px);
+    height:auto;
+    box-sizing:border-box;
 }
+
 
 .contact-left{
     display:flex; 
@@ -326,22 +381,23 @@ a:hover {
 }
 
 .contact-left button {
-    display:flex; 
+    display: flex; 
     align-items: center;
     padding: 15px 30px; 
     font-size: 16px; 
     color: black; 
     gap: 10px; 
-    border:none; 
+    border: none; 
     border-radius: 50px; 
-    background: linear-gradient(270deg, #ff994f, #ff4f5a ); 
+    background: linear-gradient(270deg, #ff994f, #ff4f5a); 
     cursor: pointer; 
+    overflow: hidden;
 }
 
 .contact-left button img{
     height: 15px; 
 }
 
-.contact-right img{
-    width: 50; 
+footer {
+    margin-top: auto;
 }
