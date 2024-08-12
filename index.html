@@ -1,15 +1,101 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
-    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua Taylor's Portfolio Website</title>
-    <link rel ="stylesheet" href ="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header">
-        
-    </div>
+    <div class="slides-container">
+        <div id="header" class="slide">
+            <div class="container">
+                <div class="header-text">
+                    <p>Informatics Student at University of Washington, Seattle</p>
+                    <h1>Hi, I'm <span style="color: red;">Joshua Taylor</span> and I am a <br> fullstack developer</h1>
+                </div>
+                <div class="arrow-container">
+                    <img src="images/arrow.png" id="arrow" alt="View my Work">
+                </div> 
+            </div>
+        </div>
+        <div id="about" class="slide">
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/pianoimage.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About</h1>
+                        <p> I believe that the pursuit of learning is a life long endeavor. As a developer with a passion for 
+                            data science and web development, I enjoy finding new ways to combine web development and machine learning to 
+                            create intuitive and engaging forms of data visualization. The combination of creativity and logic is what has 
+                            kept me committed to the process of continual learning in my field. In my free time I train and compete in Amateur MMA, 
+                            which I believe has kept me grounded and humble. As my coach would say, "with all endeavors in life stay coachable and seek to learn."
+                        </p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('tools')">Languages and Tools</p>
+                            </div>
+                            <div class = "tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Fullstack Development</span></li>
+                                    <li><span>Web/Mobile Applications</span></li>
+                                    <li><span>Database Management</span></li>
+                                    <li><span>Data Visualization and Analysis</span></li>
+                                    <li><span>Machine Learning models</span></li>
+                                    <li><span>Data Wrangling</span></li>
+                                </ul>
+                            </div>
+                            <div class = "tab-contents" id="tools">
+                                <ul>
+                                   <li><span>Python</span></li>
+                                   <li><span>CSS & Javascript</span></li>
+                                   <li><span>Java</span></li>
+                                   <li><span>R</span></li>
+                                   <li><span>SQL</span></li>
+                                   <li><span>Scikit - Learn</span></li>
+                                   <li><span>React</span></li>
+                                   <li><span>Django</span></li>
+                                   <li><span>TensorFlow</span></li>
+                                   <li><span>Git</span></li>
+                                   <li><span>Springboot</span></li>
+                                   <li><span>Node.js</span></li>
+                                   <li><span>MongoDB</span></li>
+                                   <li><span>Bootstrap</span></li>
+                                </ul>
+                            </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="scrollevents.js"> 
+    </script>
+    <script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents"); 
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link"); 
+         }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab"); 
+        }
+    event.currentTarget.classList.add("active-link"); 
+    document.getElementById(tabname).classList.add("active-tab"); 
+}
+    </script>
 </body>
 </html>
