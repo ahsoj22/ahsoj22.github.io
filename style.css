@@ -19,43 +19,6 @@
    z-index: -1;
 }
 
-.bubbles{
-    position: relative; 
-    display:flex; 
-    z-index: -100; 
-}
-
-.bubbles span{
-    position: relative; 
-    width: 30px; 
-    height: 30px; 
-    background: red; 
-    margin: 0 4px; 
-    border-radius: 50%; 
-    box-shadow: 0 0 0 10px #4fc3ec44, 
-    0 0 50px red, 
-    0 0 100px red; 
-    animation: animate 15s linear infinite; 
-    animation-duration: calc(125s / var(--i)); 
-}
-
-.bubbles span:nth-child(even){
-    background: blue; 
-    box-shadow: 0 0 0 10px red, 
-    0 0 50px blue,
-    0 0 100px blue; 
-}
-
-@keyframes animate {
-    0%
-    {
-        transform: translateY(100vh) scale(0); 
-    }
-    100%
-    {
-        transform: translateY(-10vh) scale(1); 
-    }
-}
 
 html {
     scroll-behavior: smooth;
@@ -67,8 +30,8 @@ body.no-scroll {
 
 body {
     overflow-x: hidden;
-    background: black; 
-    background-image: url("images/685972492624.jpg"); 
+    background: white; 
+    background-image: url(""); 
     color: #fff;
 }
 
@@ -77,10 +40,30 @@ body {
     height: 100vh;
 }
 
+
+
 #header {
     background-size: cover; 
     background-position: center; 
 }
+
+#header {
+    position: relative;
+    overflow: hidden;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat;
+    animation: bg-scrolling 0.92s linear infinite;
+  }
+
+@keyframes bg-scrolling {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; } 
+  }
+  
+  body {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat;
+    animation: bg-scrolling 0.92s linear infinite;
+  }
+  
 
 .container {
     padding: 10px 10%; 
@@ -382,7 +365,7 @@ a:hover {
     margin-bottom: 10px;
     left: 50%;
     transform: translateX(-35%);
-    color: white;
+    color: black;
     font-size: 18px;
 }
 
@@ -474,4 +457,105 @@ a:hover {
 
 footer {
     margin-top: auto;
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Make carousel occupy 80% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+/* Carousel Item Styling */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Make carousel occupy 80% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 60%; /* Adjust width to 60% of carousel width */
+    height: 75%; /* Adjust height to 75% of carousel height */
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0;
+    transform: scale(0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #f0f0f0; /* Light gray background for visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px;
+}
+
+.carousel-item img {
+    background: #ccc; /* Placeholder background color */
+}
+
+.project-title {
+    font-size: 24px; /* Larger font size */
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333; /* Darker color for visibility */
+    text-align: center;
+}
+
+.project-info p, .project-info a {
+    font-size: 18px; /* Larger font for better visibility */
+    color: #333; /* Darker text for better contrast */
+}
+
+
+.project-info p, .project-info a {
+    color: #333; /* Dark text for better visibility */
+}
+
+/* Image Styling in Carousel */
+.carousel-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-item:first-of-type {
+    opacity: 1; /* Make first item visible */
+    transform: scale(1); /* Full size */
+    z-index: 2; /* Bring to front */
+}
+
+/* Navigation Buttons for Carousel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff4f5a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
 }

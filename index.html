@@ -10,62 +10,31 @@
 <body class="no-scroll">
     
     <div id="header" class="slide">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#social" class="socials-link">Socials</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://www.linkedin.com/in/joshua-taylor-76445a253/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/ahsoj22" target="_blank">GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <div class="container">
-            <div class = "bubbles">
-                <span style = "--i:11;"></span>
-                <span style = "--i:12;"></span>
-                <span style = "--i:24;"></span>
-                <span style = "--i:5;"></span>
-                <span style = "--i:14;"></span>
-                <span style = "--i:21;"></span>
-                <span style = "--i:15;"></span>
-                <span style = "--i:6;"></span>
-                <span style = "--i:17;"></span>
-                <span style = "--i:13;"></span>
-                <span style = "--i:19;"></span>
-                <span style = "--i:11;"></span>
-                <span style = "--i:12;"></span>
-                <span style = "--i:24;"></span>
-                <span style = "--i:3;"></span>
-                <span style = "--i:14;"></span>
-                <span style = "--i:21;"></span>
-                <span style = "--i:15;"></span>
-                <span style = "--i:26;"></span>
-                <span style = "--i:17;"></span>
-                <span style = "--i:13;"></span>
-                <span style = "--i:22;"></span>
-                <span style = "--i:11;"></span>
-                <span style = "--i:12;"></span>
-                <span style = "--i:24;"></span>
-                <span style = "--i:27;"></span>
-                <span style = "--i:14;"></span>
-                <span style = "--i:21;"></span>
-                <span style = "--i:15;"></span>
-                <span style = "--i:12;"></span>
-                <span style = "--i:17;"></span>
-                <span style = "--i:13;"></span>
-                <span style = "--i:22;"></span>
-                <span style = "--i:11;"></span>
-                <span style = "--i:12;"></span>
-                <span style = "--i:24;"></span>
-                <span style = "--i:10;"></span>
-                <span style = "--i:14;"></span>
-                <span style = "--i:21;"></span>
-                <span style = "--i:15;"></span>
-                <span style = "--i:26;"></span>
-                <span style = "--i:17;"></span>
-                <span style = "--i:13;"></span>
-                <span style = "--i:22;"></span>
-            </div>
             <div class="header-text">
-                <p>Informatics Student at University of Washington, Seattle</p>
-                <h1>Hi, I'm <span style="color: red;">Joshua Taylor</span> and I am a <br> Data Engineer</h1>
+                <p style = "color: black">Informatics Student at University of Washington, Seattle</p>
+                <h1>Hi, I'm <span style="color: red;">Joshua Taylor</span> and I am a <br> <span style = "color: red;"> Data Engineer </span> </span></h1>
             </div>
             <div class="arrow-container" id="view-work">
                 <span class="learn-more-text">View my Work</span>
                 <img src="images/downwardarrow.png" id="arrow" alt="View my Work">
             </div> 
         </div>
+        <div class = "laser"></div>
     </div>
     <div id="about" class="slide">
         <nav>
@@ -114,15 +83,13 @@
                     <div class = "tab-contents" id="tools">
                         <ul>
                             <li><span>Python</span></li>
-                            <li><span>CSS & Javascript</span></li>
+                            <li><span>AWS (Lambda, Redshift, Athena)</span></li>
                             <li><span>Java</span></li>
                             <li><span>R</span></li>
                             <li><span>SQL</span></li>
-                            <li><span>Scikit - Learn</span></li>
                             <li><span>React</span></li>
                             <li><span>Django</span></li>
-                            <li><span>Node.js</span></li>
-                            <li><span>Bootstrap</span></li>
+                            <li><span>CSS & Javascript</span></li>
                         </ul>
                     </div>
                 </div>
@@ -130,8 +97,47 @@
         </div>
     </div>
     <div id="portfolio" class="slide">
-        <p>Portfolio content will go here</p>
+        <h1 class="sub-title">Projects</h1>
+        <div class="carousel">
+            <div class="carousel-item">
+                <h2 class="project-title">Wordplay</h2>
+                <img src="images/wordplayimage.png" alt="Wordplay Project">
+                <div class="project-info">
+                    <p>Wordplay is an educational programming langauge that is available in almost every language. As a member of its 200 
+                        person development team I wrote various end - to - end tests and supported porting the web application into a downloadable progressive web app. The 
+                        final application is still under development.
+                    </p>
+                    <a href="https://github.com/wordplaydev/wordplay" target="_blank">Learn more on Github</a>
+                </div>
+            </div>
+    
+            <div class="carousel-item">
+                <h2 class="project-title">Speech Recognizer</h2>
+                <img src="images/wordplayimage.png" alt="Speech Recognizer Project">
+                <div class="project-info">
+                    <p>Speech recognizer is a machine - learning model that is trained on a dataset of human conversation and user response to prompts. 
+                        The application attempts to predict user speech patterns and suggests possible words to the user as they respond to the final prompt. 
+                    </p>
+                    <a href="https://github.com/ahsoj22/speechrecognizer" target="_blank">Learn more on GitHub</a>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <h2 class="project-title">UFC Ticket Sales Data Analysis</h2>
+                <img src="images/ufc_dashboard.png" alt="UFC Ticket Sales Relationship Dashboard">
+                <div class="project-info">
+                    <p> This dashboard uses Kaggle's API to access a UFC PPV sales dataset from the internet, as well as a separate dataset of 
+                    fight metrics. The dashboard analyzes and presents trends between fight statistics and the ticket sales of the event. 
+                    </p>
+                    <a href="https://github.com/ahsoj22/UFCPPV_Dashboard" target="_blank">Learn more on GitHub</a>
+                </div>
+            </div>
+
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
     </div>
+    
     <div id="contact" class="slide">
     <div id="contact-container" class="contact-container">
         <div class="contact-left">
@@ -143,16 +149,17 @@
             <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
             <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
             <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-            <button type="submit">Submit <img src="" alt="submit"></button> 
+            <button type="submit">Submit</button> 
         </div>
     </div>
 </div>
     
     <script src="scrollevents.js"></script>
     <script>
+        // Tab Navigation for 'About' section
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-
+    
         function opentab(tabname) {
             for (tablink of tablinks) {
                 tablink.classList.remove("active-link");
@@ -163,64 +170,110 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-
+    
+        // Main Script for Carousel, Navigation, and Page Scrolling
         document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('.slide');
-    const nav = document.querySelector('nav');
-    const navLi = document.querySelectorAll('nav ul li a');
-    const header = document.getElementById('header');
-    const arrow = document.getElementById('arrow');
-
-    function handleNavPosition() {
-        const headerHeight = header.clientHeight;
-        if (window.scrollY > headerHeight) {
-            nav.classList.add('fixed-nav');
-        } else {
-            nav.classList.remove('fixed-nav');
-        }
-    }
-
-    function resetToIntroduction() {
-        window.scrollTo(0, 0);
-
-        history.replaceState(null, null, ' ');
-
-        document.body.classList.add('no-scroll');
-        document.getElementById('view-work').style.display = 'block';
-        nav.classList.remove('fixed-nav');
-    }
-
-    resetToIntroduction();
-
-    window.addEventListener('scroll', () => {
-        handleNavPosition();
-
-        let current = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop - sectionHeight / 3) {
-                current = section.getAttribute('id');
+            const sections = document.querySelectorAll('.slide');
+            const nav = document.querySelector('nav');
+            const navLi = document.querySelectorAll('nav ul li a');
+            const header = document.getElementById('header');
+            const arrow = document.getElementById('arrow');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentIndex = 0;
+    
+            // Handle navigation positioning when scrolling
+            function handleNavPosition() {
+                const headerHeight = header.clientHeight;
+                if (window.scrollY > headerHeight) {
+                    nav.classList.add('fixed-nav');
+                } else {
+                    nav.classList.remove('fixed-nav');
+                }
             }
-        });
-
-        navLi.forEach(li => {
-            li.classList.remove('active-link');
-            if (li.getAttribute('href') === `#${current}`) {
-                li.classList.add('active-link');
+    
+            // Reset to Introduction Section on Page Load
+            function resetToIntroduction() {
+                window.scrollTo(0, 0);
+                history.replaceState(null, null, ' ');
+                document.body.classList.add('no-scroll');
+                document.getElementById('view-work').style.display = 'block';
+                nav.classList.remove('fixed-nav');
             }
+    
+            resetToIntroduction();
+    
+            // Scroll event handler
+            window.addEventListener('scroll', () => {
+                handleNavPosition();
+    
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute('id');
+                    }
+                });
+    
+                navLi.forEach(li => {
+                    li.classList.remove('active-link');
+                    if (li.getAttribute('href') === `#${current}`) {
+                        li.classList.add('active-link');
+                    }
+                });
+            });
+    
+            // Arrow click handler to scroll to 'About' section
+            arrow.addEventListener('click', () => {
+                document.body.classList.remove('no-scroll');
+                document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('view-work').style.display = 'none';
+                handleNavPosition(); 
+            });
+    
+            // Navigation link click handler
+            const navItems = document.querySelectorAll('nav ul li a');
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    document.body.classList.remove('no-scroll');
+                    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('view-work').style.display = 'none';
+                    handleNavPosition(); 
+                });
+            });
+    
+            // Carousel Functionality
+            function displayCarousel(index) {
+                carouselItems.forEach((item, i) => {
+                    if (i === index) {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                    }
+                });
+            }
+    
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                displayCarousel(currentIndex);
+            }
+    
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+                displayCarousel(currentIndex);
+            }
+    
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+    
+            // Initial display of the carousel
+            displayCarousel(currentIndex);
         });
-    });
-
-    arrow.addEventListener('click', () => {
-        document.body.classList.remove('no-scroll');
-        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-        document.getElementById('view-work').style.display = 'none';
-        handleNavPosition(); // Ensure the nav becomes fixed immediately after scrolling
-    });
-});
-
     </script>
+    
 </body>
 </html>
