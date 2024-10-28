@@ -1,2 +1,2 @@
 # ahsoj22.github.io
-A collection of my personal projects
+My personal website that introduces myself and some of my favorite projects. 
